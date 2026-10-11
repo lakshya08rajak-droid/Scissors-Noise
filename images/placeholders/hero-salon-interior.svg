@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1120" width="960" height="1120" role="img" aria-label="Salon interior placeholder for Scissors Noise – The Family Salon in Sanpada">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#281C24"/>
+      <stop offset="55%" stop-color="#3B2935"/>
+      <stop offset="100%" stop-color="#4A3341"/>
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFB7A2" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#B88472" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="1120" fill="url(#heroBg)"/>
+  <circle cx="780" cy="190" r="260" fill="url(#goldGlow)"/>
+  <circle cx="160" cy="920" r="220" fill="url(#goldGlow)"/>
+  <!-- Architectural Arch Frame -->
+  <rect x="190" y="130" width="580" height="700" rx="290" fill="#FAF6F0" fill-opacity="0.05" stroke="#D9AF9B" stroke-opacity="0.4" stroke-width="1.5"/>
+  <rect x="214" y="154" width="532" height="652" rx="266" fill="none" stroke="#D9AF9B" stroke-opacity="0.2" stroke-width="1"/>
+  <!-- Editorial Salon Styling Mirror & Station Illustration -->
+  <g transform="translate(480, 450)" fill="none" stroke="#E4C1AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-110" y="-190" width="220" height="310" rx="110" fill="#FAF6F0" fill-opacity="0.04" stroke-opacity="0.85"/>
+    <rect x="-92" y="-172" width="184" height="274" rx="92" stroke-opacity="0.35"/>
+    <!-- Subtle mirror reflection lines -->
+    <line x1="-48" y1="-95" x2="36" y2="-35" stroke-opacity="0.45"/>
+    <line x1="-32" y1="-50" x2="22" y2="-12" stroke-opacity="0.3"/>
+    <!-- Vanity counter shelf -->
+    <line x1="-155" y1="122" x2="155" y2="122" stroke-width="3" stroke-opacity="0.9"/>
+    <line x1="-125" y1="138" x2="125" y2="138" stroke-width="1.5" stroke-opacity="0.45"/>
+    <!-- Scissors & comb silhouette -->
+    <circle cx="-18" cy="48" r="14" stroke-opacity="0.75"/>
+    <circle cx="18" cy="48" r="14" stroke-opacity="0.75"/>
+    <line x1="-8" y1="36" x2="26" y2="-28" stroke-opacity="0.8"/>
+    <line x1="8" y1="36" x2="-26" y2="-28" stroke-opacity="0.8"/>
+  </g>
+  <!-- Placeholder Label Card -->
+  <g transform="translate(480, 935)" text-anchor="middle">
+    <rect x="-210" y="-58" width="420" height="32" rx="16" fill="#3D2A37" stroke="#D4A894" stroke-opacity="0.6" stroke-width="1"/>
+    <text x="0" y="-37" fill="#E6C3B0" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="2.5">REPLACEABLE SALON PHOTO PLACEHOLDER</text>
+    <text x="0" y="6" fill="#FAF6F0" font-family="Georgia, 'Playfair Display', serif" font-size="24" font-weight="600">Scissors Noise — Salon Interior</text>
+    <text x="0" y="36" fill="#D5BEB4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">images/placeholders/hero-salon-interior.svg</text>
+  </g>
+</svg>

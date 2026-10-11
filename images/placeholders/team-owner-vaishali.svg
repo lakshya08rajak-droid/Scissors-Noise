@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" width="640" height="720" role="img" aria-label="Portrait placeholder for Mrs. Vaishali, Owner of Scissors Noise">
+  <defs>
+    <linearGradient id="ownerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3C2631"/>
+      <stop offset="100%" stop-color="#261920"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="720" fill="url(#ownerBg)"/>
+  <rect x="130" y="75" width="380" height="430" rx="190" fill="#FAF6F0" fill-opacity="0.05" stroke="#DFB7A2" stroke-opacity="0.4" stroke-width="1.5"/>
+  <g transform="translate(320, 290)" fill="none" stroke="#E4C1AE" stroke-width="2">
+    <circle cx="0" cy="-38" r="46" stroke-opacity="0.85"/>
+    <path d="M -82 88 C -82 26, 82 26, 82 88" stroke-opacity="0.85"/>
+    <circle cx="0" cy="-8" r="118" stroke-opacity="0.22" stroke-dasharray="4 6"/>
+  </g>
+  <g transform="translate(320, 585)" text-anchor="middle">
+    <rect x="-155" y="-50" width="310" height="28" rx="14" fill="#4A303D" stroke="#DFB7A2" stroke-opacity="0.6" stroke-width="1"/>
+    <text x="0" y="-32" fill="#E6C3B0" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="2">OWNER PORTRAIT PLACEHOLDER</text>
+    <text x="0" y="4" fill="#FAF6F0" font-family="Georgia, 'Playfair Display', serif" font-size="20" font-weight="600">Mrs. Vaishali — Salon Owner</text>
+    <text x="0" y="30" fill="#D5BEB4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11.5">images/placeholders/team-owner-vaishali.svg</text>
+  </g>
+</svg>

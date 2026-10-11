@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img" aria-label="Gallery placeholder for balayage, keratin, and hair color work">
+  <rect width="800" height="640" fill="#3F2833"/>
+  <rect x="160" y="55" width="480" height="370" rx="24" fill="#FAF6F0" fill-opacity="0.06" stroke="#DFB7A2" stroke-opacity="0.4" stroke-width="1.5"/>
+  <g transform="translate(400, 240)" fill="none" stroke="#E4C1AE" stroke-width="2.2" stroke-linecap="round">
+    <path d="M -70 -50 C -25 -80, 25 -20, 70 -50"/>
+    <path d="M -75 -15 C -25 -45, 25 15, 75 -15" stroke-opacity="0.8"/>
+    <path d="M -75 20 C -25 -10, 25 50, 75 20" stroke-opacity="0.65"/>
+    <path d="M -70 55 C -25 25, 25 85, 70 55" stroke-opacity="0.5"/>
+  </g>
+  <g transform="translate(400, 515)" text-anchor="middle">
+    <rect x="-150" y="-48" width="300" height="26" rx="13" fill="#523543" stroke="#DFB7A2" stroke-opacity="0.6" stroke-width="1"/>
+    <text x="0" y="-31" fill="#E6C3B0" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="2">GALLERY PLACEHOLDER · 03</text>
+    <text x="0" y="2" fill="#FAF6F0" font-family="Georgia, 'Playfair Display', serif" font-size="21" font-weight="600">Balayage, Keratin &amp; Color Work</text>
+    <text x="0" y="28" fill="#D5BEB4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12">images/placeholders/gallery-hair-color-balayage.svg</text>
+  </g>
+</svg>

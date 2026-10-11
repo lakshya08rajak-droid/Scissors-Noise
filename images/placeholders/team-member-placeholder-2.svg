@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" width="640" height="720" role="img" aria-label="Replaceable team member photo placeholder 2">
+  <rect width="640" height="720" fill="#EFE6DC"/>
+  <rect x="130" y="75" width="380" height="430" rx="190" fill="#FAF6F0" stroke="#B88472" stroke-opacity="0.35" stroke-width="1.5"/>
+  <g transform="translate(320, 290)" fill="none" stroke="#8A5A4C" stroke-width="2">
+    <circle cx="0" cy="-38" r="44" stroke-opacity="0.75"/>
+    <path d="M -78 86 C -78 26, 78 26, 78 86" stroke-opacity="0.75"/>
+  </g>
+  <g transform="translate(320, 585)" text-anchor="middle">
+    <rect x="-155" y="-50" width="310" height="28" rx="14" fill="#FAF6F0" stroke="#B88472" stroke-width="1"/>
+    <text x="0" y="-32" fill="#8A5A4C" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="2">TEAM PHOTO PLACEHOLDER 02</text>
+    <text x="0" y="4" fill="#261B23" font-family="Georgia, 'Playfair Display', serif" font-size="19" font-weight="600">Add Team Member Photo Later</text>
+    <text x="0" y="30" fill="#634B52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11.5">images/placeholders/team-member-placeholder-2.svg</text>
+  </g>
+</svg>

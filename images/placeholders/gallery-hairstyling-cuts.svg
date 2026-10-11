@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img" aria-label="Gallery placeholder for haircuts, blow dry, and hairstyling work">
+  <rect width="800" height="640" fill="#EFE6DC"/>
+  <rect x="160" y="55" width="480" height="370" rx="24" fill="#FAF6F0" stroke="#B88472" stroke-opacity="0.4" stroke-width="1.5"/>
+  <g transform="translate(400, 240)" fill="none" stroke="#7A4E48" stroke-width="2.2" stroke-linecap="round">
+    <circle cx="-30" cy="40" r="20"/>
+    <circle cx="30" cy="40" r="20"/>
+    <line x1="-14" y1="24" x2="38" y2="-60"/>
+    <line x1="14" y1="24" x2="-38" y2="-60"/>
+    <circle cx="0" cy="0" r="4" fill="#7A4E48"/>
+  </g>
+  <g transform="translate(400, 515)" text-anchor="middle">
+    <rect x="-150" y="-48" width="300" height="26" rx="13" fill="#FAF6F0" stroke="#B88472" stroke-width="1"/>
+    <text x="0" y="-31" fill="#8A5A4C" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="2">GALLERY PLACEHOLDER · 02</text>
+    <text x="0" y="2" fill="#261B23" font-family="Georgia, 'Playfair Display', serif" font-size="21" font-weight="600">Haircuts, Blow Dry &amp; Hairstyling</text>
+    <text x="0" y="28" fill="#634B52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12">images/placeholders/gallery-hairstyling-cuts.svg</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img" aria-label="Gallery placeholder for facials, skincare, brow shaping, and lash work">
+  <rect width="800" height="640" fill="#EFE6DC"/>
+  <rect x="160" y="55" width="480" height="370" rx="24" fill="#FAF6F0" stroke="#B88472" stroke-opacity="0.4" stroke-width="1.5"/>
+  <g transform="translate(400, 240)" fill="none" stroke="#7A4E48" stroke-width="2" stroke-linecap="round">
+    <path d="M 0 65 L 0 -55"/>
+    <path d="M 0 25 C -38 20, -48 -12, -12 -22 C -4 -24, 0 -4, 0 25 Z"/>
+    <path d="M 0 5 C 38 0, 48 -32, 12 -42 C 4 -44, 0 -24, 0 5 Z"/>
+    <circle cx="0" cy="-65" r="8"/>
+  </g>
+  <g transform="translate(400, 515)" text-anchor="middle">
+    <rect x="-150" y="-48" width="300" height="26" rx="13" fill="#FAF6F0" stroke="#B88472" stroke-width="1"/>
+    <text x="0" y="-31" fill="#8A5A4C" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="2">GALLERY PLACEHOLDER · 06</text>
+    <text x="0" y="2" fill="#261B23" font-family="Georgia, 'Playfair Display', serif" font-size="21" font-weight="600">Skin, Facials, Brows &amp; Lashes</text>
+    <text x="0" y="28" fill="#634B52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12">images/placeholders/gallery-skin-beauty-care.svg</text>
+  </g>
+</svg>

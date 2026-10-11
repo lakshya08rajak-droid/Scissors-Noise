@@ -1,0 +1,11 @@
+{
+  "name": "scissors-noise-family-salon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Responsive editorial website for Scissors Noise – The Family Salon in Sector 4, Sanpada, Navi Mumbai.",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "npx serve . -l 3000",
+    "verify": "sh verify.sh"
+  }
+}

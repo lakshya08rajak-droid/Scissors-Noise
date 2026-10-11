@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" width="960" height="760" role="img" aria-label="Salon interior and team space placeholder for Scissors Noise in Sector 4, Sanpada">
+  <defs>
+    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3EAE0"/>
+      <stop offset="100%" stop-color="#E4D4C5"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="760" fill="url(#aboutBg)"/>
+  <circle cx="820" cy="140" r="190" fill="#B88472" fill-opacity="0.1"/>
+  <circle cx="140" cy="640" r="170" fill="#281C24" fill-opacity="0.06"/>
+  <rect x="130" y="70" width="700" height="440" rx="36" fill="#FAF6F0" fill-opacity="0.7" stroke="#B88472" stroke-opacity="0.4" stroke-width="1.5"/>
+  <!-- Two Arched Styling Mirrors -->
+  <g transform="translate(360, 290)" fill="none" stroke="#7A4E48" stroke-width="2">
+    <rect x="-75" y="-130" width="150" height="220" rx="75" fill="#EFE6DC"/>
+    <line x1="-90" y1="92" x2="90" y2="92" stroke-width="2.5"/>
+    <line x1="-30" y1="-55" x2="25" y2="-15" stroke-opacity="0.45"/>
+  </g>
+  <g transform="translate(600, 290)" fill="none" stroke="#7A4E48" stroke-width="2">
+    <rect x="-75" y="-130" width="150" height="220" rx="75" fill="#EFE6DC"/>
+    <line x1="-90" y1="92" x2="90" y2="92" stroke-width="2.5"/>
+    <line x1="-30" y1="-55" x2="25" y2="-15" stroke-opacity="0.45"/>
+  </g>
+  <g transform="translate(480, 605)" text-anchor="middle">
+    <rect x="-195" y="-54" width="390" height="30" rx="15" fill="#FAF6F0" stroke="#B88472" stroke-width="1"/>
+    <text x="0" y="-35" fill="#8C584C" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="2">ABOUT SECTION PHOTO PLACEHOLDER</text>
+    <text x="0" y="4" fill="#261B23" font-family="Georgia, 'Playfair Display', serif" font-size="22" font-weight="600">Welcoming Unisex Family Salon Space — Sanpada</text>
+    <text x="0" y="32" fill="#634B52" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13">images/placeholders/about-salon-space.svg</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img" aria-label="Gallery placeholder for Scissors Noise salon interior and styling stations">
+  <rect width="800" height="640" fill="#2A1D26"/>
+  <rect x="160" y="55" width="480" height="370" rx="24" fill="#FAF6F0" fill-opacity="0.06" stroke="#DFB7A2" stroke-opacity="0.35" stroke-width="1.5"/>
+  <g transform="translate(400, 240)" fill="none" stroke="#E4C1AE" stroke-width="2">
+    <rect x="-70" y="-110" width="140" height="200" rx="70"/>
+    <line x1="-90" y1="92" x2="90" y2="92" stroke-width="2.5"/>
+    <line x1="-25" y1="-45" x2="25" y2="-10" stroke-opacity="0.5"/>
+  </g>
+  <g transform="translate(400, 515)" text-anchor="middle">
+    <rect x="-150" y="-48" width="300" height="26" rx="13" fill="#3F2B38" stroke="#DFB7A2" stroke-opacity="0.6" stroke-width="1"/>
+    <text x="0" y="-31" fill="#E6C3B0" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="2">GALLERY PLACEHOLDER · 01</text>
+    <text x="0" y="2" fill="#FAF6F0" font-family="Georgia, 'Playfair Display', serif" font-size="21" font-weight="600">Salon Interior &amp; Styling Stations</text>
+    <text x="0" y="28" fill="#D5BEB4" font-family="ui-monospace, SFMono-Regular, monospace" font-size="12">images/placeholders/gallery-salon-interior.svg</text>
+  </g>
+</svg>

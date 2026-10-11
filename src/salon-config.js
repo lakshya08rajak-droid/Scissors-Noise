@@ -1,0 +1,409 @@
+/**
+ * ============================================================================
+ * SCISSORS NOISE – THE FAMILY SALON | CENTRAL CONFIGURATION FILE
+ * ============================================================================
+ * Edit this file to update salon hours, contact details, image paths,
+ * service categories, confirmation flags, team members, gallery items,
+ * review excerpts, and social links.
+ *
+ * When you add real salon photos to the `images/` folder, simply update the
+ * `src` paths below and set `isPlaceholder: false`.
+ * ============================================================================
+ */
+
+window.SALON_CONFIG = {
+  business: {
+    name: "Scissors Noise – The Family Salon",
+    shortName: "Scissors Noise",
+    tagline: "The Family Salon",
+    monogram: "SN",
+    positioning:
+      "Welcoming unisex family salon offering professional hair, beauty, skin, nail, and bridal services.",
+    owner: {
+      name: "Mrs. Vaishali",
+      role: "Salon Owner",
+      note: "Described in customer reviews as soft-spoken and courteous towards customers.",
+    },
+    rating: {
+      score: "4.9",
+      outOf: "5",
+      reviewCount: 550,
+      source: "Google reviews",
+    },
+    typicalVisitDuration: "1–4 hours",
+  },
+
+  hours: {
+    // Keep hours editable. Do not invent opening times for other days until supplied.
+    statusLabel: "Open · Closes at 9:00 PM",
+    summaryText: "Open; closes at 9:00 PM",
+    scheduleNote:
+      "Opening time and day-by-day schedule can be updated here once confirmed by the salon.",
+  },
+
+  contact: {
+    phoneDisplay: "+91 99875 67224",
+    phoneTel: "+919987567224",
+    whatsappNumber: "919987567224", // International format without '+' or spaces
+    defaultWhatsappMessage:
+      "Hi Scissors Noise, I’d like to ask about an appointment.",
+    address: {
+      full: "Shop No. 1 & 2, Vinay Vedanta, Plot No. A23, near Sanpada Railway Station, Sector 4, Sanpada, Navi Mumbai, Maharashtra 400705",
+      line1: "Shop No. 1 & 2, Vinay Vedanta, Plot No. A23",
+      line2: "Near Sanpada Railway Station, Sector 4",
+      locality: "Sanpada, Navi Mumbai",
+      region: "Maharashtra",
+      postalCode: "400705",
+      country: "IN",
+    },
+    maps: {
+      directionsUrl:
+        "https://www.google.com/maps/search/?api=1&query=Scissors+Noise+The+Family+Salon+Shop+No.+1+%26+2+Vinay+Vedanta+Plot+No.+A23+near+Sanpada+Railway+Station+Sector+4+Sanpada+Navi+Mumbai+Maharashtra+400705",
+      embedUrl:
+        "https://maps.google.com/maps?q=Vinay%20Vedanta%2C%20Plot%20No.%20A23%2C%20Sector%204%2C%20Sanpada%2C%20Navi%20Mumbai%2C%20Maharashtra%20400705&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      // Replace with the salon's verified Google Business Profile review link when ready
+      googleReviewsUrlPlaceholder:
+        "https://www.google.com/maps/search/?api=1&query=Scissors+Noise+The+Family+Salon+Sanpada+Navi+Mumbai",
+      isGoogleUrlPlaceholder: true,
+    },
+    // Editable social placeholders — do not invent handles; set url when supplied by salon
+    socialPlaceholders: [
+      {
+        platform: "Instagram",
+        url: "", // Paste Instagram URL here when available, e.g. "https://instagram.com/..."
+        placeholderLabel: "Instagram (Link to be added)",
+      },
+      {
+        platform: "Facebook",
+        url: "", // Paste Facebook URL here when available
+        placeholderLabel: "Facebook (Link to be added)",
+      },
+    ],
+  },
+
+  images: {
+    hero: {
+      src: "images/placeholders/hero-salon-interior.svg",
+      alt: "Salon interior placeholder for Scissors Noise – The Family Salon in Sanpada, Navi Mumbai",
+      caption: "Replaceable salon photo placeholder (hero-salon-interior.svg)",
+      isPlaceholder: true,
+    },
+    about: {
+      src: "images/placeholders/about-salon-space.svg",
+      alt: "Welcoming unisex family salon space placeholder for Scissors Noise near Sanpada Railway Station",
+      caption: "Replaceable salon interior or team photo placeholder (about-salon-space.svg)",
+      isPlaceholder: true,
+    },
+  },
+
+  services: [
+    {
+      id: "hair",
+      category: "Hair",
+      tagline: "Cuts, styling, colour, braiding & smoothing care for all hair types",
+      description:
+        "From everyday haircuts and blow dries to balayage, braiding, keratin, and smoothing services.",
+      requiresConfirmation: false,
+      items: [
+        { name: "Haircuts" },
+        { name: "Hairstyling" },
+        { name: "Blow dry" },
+        { name: "Shampoo and conditioning" },
+        { name: "Hair threading" },
+        { name: "Hair extensions" },
+        { name: "Perms" },
+        { name: "Balayage" },
+        { name: "Box braids" },
+        { name: "Braids" },
+        { name: "Keratin" },
+        { name: "Smoothing and straightening" },
+        {
+          name: "Nano plastian",
+          requiresConfirmation: true,
+          confirmationNote:
+            "Flagged for salon confirmation before publishing: preserve supplied spelling (“Nano plastian”) or confirm whether the salon prefers “Nanoplastia”.",
+        },
+      ],
+    },
+    {
+      id: "skin-and-beauty",
+      category: "Skin and beauty",
+      tagline: "Facials, targeted skincare, tanning care & makeup services",
+      description:
+        "Personalised skin care, facials, acne treatments, tanning care, and makeup for everyday or special appearances.",
+      requiresConfirmation: false,
+      items: [
+        { name: "Facials" },
+        { name: "Skincare" },
+        { name: "Acne treatments" },
+        { name: "Tanning" },
+        { name: "Makeup and makeup services" },
+      ],
+    },
+    {
+      id: "brows-and-lashes",
+      category: "Brows and lashes",
+      tagline: "Precision brow shaping, beautification & lash enhancements",
+      description:
+        "Careful eyebrow threading, shaping, beautification, lash lifts, and eyelash extensions.",
+      requiresConfirmation: false,
+      items: [
+        { name: "Eyebrow threading" },
+        { name: "Eyebrow shaping" },
+        { name: "Eyebrow beautification" },
+        { name: "Lash lift" },
+        { name: "Eyelashes" },
+        { name: "Eyelash extensions" },
+      ],
+    },
+    {
+      id: "nails",
+      category: "Nails",
+      tagline: "Hand & foot care, acrylic extensions & custom nail art",
+      description:
+        "Classic manicures and pedicures alongside acrylic nails and expressive nail art.",
+      requiresConfirmation: false,
+      items: [
+        { name: "Manicure" },
+        { name: "Pedicure" },
+        { name: "Acrylic nails" },
+        { name: "Nail art" },
+      ],
+    },
+    {
+      id: "waxing-and-grooming",
+      category: "Waxing and grooming",
+      tagline: "Essential waxing & grooming services in a comfortable setting",
+      description:
+        "Full body waxing, Brazilian waxing, regular waxing, and clean shaving services.",
+      requiresConfirmation: false,
+      items: [
+        { name: "Body waxing" },
+        { name: "Brazilian waxing" },
+        { name: "Waxing" },
+        { name: "Shaving" },
+      ],
+    },
+    {
+      id: "bridal-and-occasions",
+      category: "Bridal and occasions",
+      tagline: "Dedicated wedding, bridal & festive event preparation",
+      description:
+        "Complete bridal services and coordinated hair, makeup, and grooming preparation for weddings and milestone events.",
+      requiresConfirmation: false,
+      items: [
+        { name: "Bridal services" },
+        { name: "Wedding or event preparation" },
+      ],
+    },
+    {
+      id: "botox-treatment",
+      category: "Botox Treatment",
+      tagline: "Listed as supplied — flagged for salon confirmation before publishing",
+      description:
+        "Included by name only as supplied. Please confirm exact salon service details (e.g., hair botox conditioning vs. other salon service) with Scissors Noise before publishing.",
+      requiresConfirmation: true,
+      confirmationNote:
+        "Flagged for salon confirmation before publishing. No medical claims are made.",
+      items: [
+        {
+          name: "Botox Treatment",
+          requiresConfirmation: true,
+          confirmationNote:
+            "Confirm service scope and wording with salon owner before publishing.",
+        },
+      ],
+    },
+  ],
+
+  whyVisit: [
+    {
+      number: "01",
+      title: "Broad Unisex & Family Service Offering",
+      description:
+        "Haircuts, styling, colour, skin and beauty care, brows and lashes, nail art, waxing, grooming, and bridal services under one roof for individuals and families.",
+    },
+    {
+      number: "02",
+      title: "Convenient Sanpada Location",
+      description:
+        "Located at Shop No. 1 & 2, Vinay Vedanta, Plot No. A23, near Sanpada Railway Station in Sector 4, making visits straightforward for local residents and commuters.",
+    },
+    {
+      number: "03",
+      title: "4.9/5 Rating from 550 Google Reviews",
+      description:
+        "Trusted by returning customers who highlight the welcoming atmosphere, attentive care, and courteous service.",
+    },
+    {
+      number: "04",
+      title: "Plan for Your Visit",
+      description:
+        "Typical visits range from 1–4 hours. The supplied hours information lists closing at 9:00 PM; contact the salon to ask about opening times and appointment availability.",
+    },
+  ],
+
+  team: [
+    {
+      id: "owner-vaishali",
+      name: "Mrs. Vaishali",
+      role: "Salon Owner",
+      description:
+        "Welcomes guests at Scissors Noise – The Family Salon. Described by customers in Google reviews as soft-spoken and courteous towards customers.",
+      imageSrc: "images/placeholders/team-owner-vaishali.svg",
+      imageAlt: "Replaceable portrait placeholder for Mrs. Vaishali, Owner of Scissors Noise",
+      isPlaceholder: true,
+    },
+    {
+      id: "team-placeholder-1",
+      name: "[Team Member Name Placeholder 01]",
+      role: "[Role / Service Focus Placeholder]",
+      description:
+        "Placeholder card ready for a real stylist or beauty professional profile once supplied by the salon.",
+      imageSrc: "images/placeholders/team-member-placeholder-1.svg",
+      imageAlt: "Replaceable photo placeholder for Scissors Noise team member 1",
+      isPlaceholder: true,
+    },
+    {
+      id: "team-placeholder-2",
+      name: "[Team Member Name Placeholder 02]",
+      role: "[Role / Service Focus Placeholder]",
+      description:
+        "Placeholder card ready for a real stylist or beauty professional profile once supplied by the salon.",
+      imageSrc: "images/placeholders/team-member-placeholder-2.svg",
+      imageAlt: "Replaceable photo placeholder for Scissors Noise team member 2",
+      isPlaceholder: true,
+    },
+  ],
+
+  gallery: [
+    {
+      id: "gallery-interior",
+      category: "Salon Interior",
+      title: "Salon Interior & Styling Stations",
+      caption:
+        "Placeholder for real salon interior photography at Shop No. 1 & 2, Vinay Vedanta, Sector 4, Sanpada.",
+      src: "images/placeholders/gallery-salon-interior.svg",
+      alt: "Placeholder image for Scissors Noise salon interior and styling chairs",
+      isPlaceholder: true,
+    },
+    {
+      id: "gallery-hairstyling",
+      category: "Hairstyles & Cuts",
+      title: "Haircuts, Blow Dry & Styling",
+      caption:
+        "Placeholder for salon haircut, blow dry, braiding, and hairstyling photography.",
+      src: "images/placeholders/gallery-hairstyling-cuts.svg",
+      alt: "Placeholder image for haircuts, blow dry, and hairstyling work",
+      isPlaceholder: true,
+    },
+    {
+      id: "gallery-color",
+      category: "Colour & Smoothing",
+      title: "Balayage, Keratin & Smoothing Work",
+      caption:
+        "Placeholder for balayage, keratin, smoothing, straightening, and hair colour photography.",
+      src: "images/placeholders/gallery-hair-color-balayage.svg",
+      alt: "Placeholder image for hair colour, balayage, and smoothing work",
+      isPlaceholder: true,
+    },
+    {
+      id: "gallery-nails",
+      category: "Nails & Nail Art",
+      title: "Manicure, Pedicure, Acrylics & Nail Art",
+      caption:
+        "Placeholder for manicure, pedicure, acrylic nails, and custom nail art photography.",
+      src: "images/placeholders/gallery-nail-art-manicure.svg",
+      alt: "Placeholder image for manicure, acrylic nails, and nail art",
+      isPlaceholder: true,
+    },
+    {
+      id: "gallery-bridal",
+      category: "Bridal & Occasions",
+      title: "Bridal Looks & Event Preparation",
+      caption:
+        "Placeholder for bridal hair, makeup, and wedding or event preparation photography.",
+      src: "images/placeholders/gallery-bridal-occasion.svg",
+      alt: "Placeholder image for bridal looks and wedding preparation",
+      isPlaceholder: true,
+    },
+    {
+      id: "gallery-skin-brows",
+      category: "Skin, Brows & Lashes",
+      title: "Facials, Skincare, Brow Shaping & Lash Lift",
+      caption:
+        "Placeholder for facials, skincare, eyebrow beautification, lash lift, and eyelash extension photography.",
+      src: "images/placeholders/gallery-skin-beauty-care.svg",
+      alt: "Placeholder image for facials, skincare, eyebrow shaping, and lash work",
+      isPlaceholder: true,
+    },
+  ],
+
+  reviews: [
+    {
+      id: "review-1",
+      quote:
+        "Best service and familer staff we visit second time with full of happiness 😊",
+      sourceLabel: "Excerpt from Google Review",
+    },
+    {
+      id: "review-2",
+      quote:
+        "I absolutely love the outcome and have received so many compliments already!",
+      sourceLabel: "Excerpt from Google Review",
+    },
+    {
+      id: "review-3",
+      quote:
+        "The owner Mrs. Vaishali is very soft spoken and courteous towards the customers.",
+      sourceLabel: "Excerpt from Google Review",
+    },
+  ],
+};
+
+
+// Real salon photographs supplied by the owner. Keep the original JPEGs in images/salon/.
+window.SALON_CONFIG.images.hero = {
+  src: "images/salon/Image 4.jpeg",
+  alt: "Long, softly curled brown hairstyle at Scissors Noise salon",
+  caption: "Long, softly curled brown hairstyle",
+  isPlaceholder: false,
+};
+window.SALON_CONFIG.images.about = {
+  src: "images/salon/Image 21.jpeg",
+  alt: "Styling stations and mirrors inside Scissors Noise salon",
+  caption: "Styling stations inside the salon",
+  isPlaceholder: false,
+};
+window.SALON_CONFIG.gallery = [
+    { id: "salon-photo-01", category: 'Salon Interior', title: 'Salon interior with styling chairs and mirrors', caption: 'Interior styling stations decorated for a salon celebration.', src: 'images/salon/Image 1.jpeg', alt: 'Interior styling stations decorated for a salon celebration.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-02", category: 'Hairstyles & Cuts', title: 'Long, smooth straight hairstyle', caption: 'Long straight hair shown from the back.', src: 'images/salon/Image 2.jpeg', alt: 'Long straight hair shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-03", category: 'Hair Colour', title: 'Burgundy curls', caption: 'Long burgundy-colored curls shown from the back.', src: 'images/salon/Image 5.jpeg', alt: 'Long burgundy-colored curls shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-04", category: 'Hairstyling', title: 'Soft brown curls', caption: 'Long, softly curled brown hairstyle in a salon chair.', src: 'images/salon/Image 4.jpeg', alt: 'Long, softly curled brown hairstyle in a salon chair.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-05", category: 'Hairstyling', title: 'Long dark curls', caption: 'Long dark wavy hairstyle shown from the back.', src: 'images/salon/Image 6.jpeg', alt: 'Long dark wavy hairstyle shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-06", category: 'Hairstyles & Cuts', title: 'Sleek straight hairstyle', caption: 'Long, smooth dark hair shown from the back.', src: 'images/salon/Image 7.jpeg', alt: 'Long, smooth dark hair shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-07", category: 'Nails', title: 'Pink ombré nail art', caption: 'Pink ombré manicure with pointed nail extensions.', src: 'images/salon/Image 12.jpeg', alt: 'Pink ombré manicure with pointed nail extensions.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-08", category: 'Hair Colour', title: 'Dimensional brown curls', caption: 'Long brown curls with lighter dimensional highlights.', src: 'images/salon/Image 23.jpeg', alt: 'Long brown curls with lighter dimensional highlights.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-09", category: 'Nails', title: 'Blue and black nail art', caption: 'Blue and black patterned nail art on extended nails.', src: 'images/salon/Image 29.jpeg', alt: 'Blue and black patterned nail art on extended nails.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-10", category: 'Nails', title: 'Neutral manicure', caption: 'Neutral-toned manicure with pointed nail extensions.', src: 'images/salon/Image 28.jpeg', alt: 'Neutral-toned manicure with pointed nail extensions.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-11", category: 'Nails', title: 'Floral nail art', caption: 'Light-colored nail art with floral accents.', src: 'images/salon/Image 27.jpeg', alt: 'Light-colored nail art with floral accents.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-12", category: 'Hairstyling', title: 'Copper curls', caption: 'Long copper-toned curls shown from the back.', src: 'images/salon/Image 25.jpeg', alt: 'Long copper-toned curls shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-13", category: 'Hairstyling', title: 'Long dimensional waves', caption: 'Long dark brown waves shown from the back.', src: 'images/salon/Image 24.jpeg', alt: 'Long dark brown waves shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-14", category: 'Nails', title: 'Scissors Noise nail art', caption: 'Nail art photograph featuring Scissors Noise branding.', src: 'images/salon/Image 22.jpeg', alt: 'Nail art photograph featuring Scissors Noise branding.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-15", category: 'Salon Interior', title: 'Styling stations in the salon', caption: 'Salon interior showing styling stations and mirrors.', src: 'images/salon/Image 21.jpeg', alt: 'Salon interior showing styling stations and mirrors.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-16", category: 'Hairstyling', title: 'Soft auburn curls', caption: 'Long auburn curls shown from the back.', src: 'images/salon/Image 19.jpeg', alt: 'Long auburn curls shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-17", category: 'Hair Colour', title: 'Red waves', caption: 'Long red waves shown from the back.', src: 'images/salon/Image 17.jpeg', alt: 'Long red waves shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-18", category: 'Hair Colour', title: 'Highlighted curls', caption: 'Long brown curls with lighter highlights, shown from the back.', src: 'images/salon/Image 18.jpeg', alt: 'Long brown curls with lighter highlights, shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-19", category: 'Hairstyling', title: 'Layered auburn curls', caption: 'Layered auburn curls shown from the back in a styling chair.', src: 'images/salon/Image 16.jpeg', alt: 'Layered auburn curls shown from the back in a styling chair.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-20", category: 'Salon Moments', title: 'Salon team at an event', caption: 'Two salon professionals holding a certificate at an event.', src: 'images/salon/Image 15.jpeg', alt: 'Two salon professionals holding a certificate at an event.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-21", category: 'Hair Colour', title: 'Red bob hairstyle', caption: 'Short rounded red bob hairstyle shown from the back.', src: 'images/salon/Image 14.jpeg', alt: 'Short rounded red bob hairstyle shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-22", category: 'Hairstyling', title: 'Long highlighted curls', caption: 'Long highlighted curls shown from the back.', src: 'images/salon/Image 13.jpeg', alt: 'Long highlighted curls shown from the back.', isPlaceholder: false, type: "image" },
+    { id: "salon-photo-23", category: 'Salon Interior', title: 'Hair wash stations', caption: 'Salon shampoo basins and chairs.', src: 'images/salon/Image 9.jpeg', alt: 'Salon shampoo basins and chairs.', isPlaceholder: false, type: "image" }
+];
+const featuredSalonPhotoIds = new Set([
+  "salon-photo-01", "salon-photo-03", "salon-photo-07",
+  "salon-photo-09", "salon-photo-14", "salon-photo-15",
+]);
+window.SALON_CONFIG.gallery.forEach((item) => {
+  item.featured = featuredSalonPhotoIds.has(item.id);
+});
