@@ -154,6 +154,28 @@
       });
     });
 
+    // Close drawer when clicking outside header
+    document.addEventListener("click", function (e) {
+      if (
+        menuToggle.getAttribute("aria-expanded") === "true" &&
+        header &&
+        !header.contains(e.target)
+      ) {
+        setMenuOpen(false);
+      }
+    });
+
+    // Close drawer automatically if viewport expands to desktop nav
+    window.addEventListener(
+      "resize",
+      function () {
+        if (window.innerWidth >= 1024 && menuToggle.getAttribute("aria-expanded") === "true") {
+          setMenuOpen(false);
+        }
+      },
+      { passive: true }
+    );
+
     // Close drawer on Escape key
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
@@ -225,9 +247,11 @@
     let zoomLevel = 1;
 
     function cardMarkup(item, index) {
+      const imgWidth = item.width || 223;
+      const imgHeight = item.height || 279;
       return `<article class="gallery-card">
         <button type="button" class="gallery-trigger" data-lightbox-index="${index}" aria-label="Open larger view: ${item.title}">
-          <img src="${item.src}" alt="${item.alt}" loading="lazy" width="800" height="1000" />
+          <img src="${item.src}" alt="${item.alt}" loading="lazy" decoding="async" width="${imgWidth}" height="${imgHeight}" />
           <span class="gallery-zoom-pill">View photo</span>
         </button>
         <div class="gallery-card-meta"><div class="gallery-category-label">${item.category}</div><h3 class="gallery-card-title">${item.title}</h3></div>
@@ -263,6 +287,7 @@
 
     function renderSlide(index) {
       const total = visibleItems.length;
+      if (!total) return;
       currentIndex = (index + total) % total;
       const item = visibleItems[currentIndex];
       if (!item) return;
@@ -270,6 +295,8 @@
       if (lightboxImg) {
         lightboxImg.src = item.src;
         lightboxImg.alt = item.alt;
+        lightboxImg.width = item.width || 223;
+        lightboxImg.height = item.height || 279;
         lightboxImg.onerror = () => {
           lightboxImg.alt = "This salon photo could not be loaded.";
           if (lightboxCaption) lightboxCaption.textContent = "This photo could not be loaded. Close the viewer or choose another image.";
@@ -338,9 +365,14 @@
     });
 
     let touchStartX = null;
-    lightbox?.addEventListener("touchstart", (event) => { touchStartX = event.changedTouches[0].clientX; }, { passive: true });
+    lightbox?.addEventListener("touchstart", (event) => {
+      touchStartX = event.changedTouches[0].clientX;
+    }, { passive: true });
     lightbox?.addEventListener("touchend", (event) => {
-      if (touchStartX === null) return;
+      if (touchStartX === null || zoomLevel > 1) {
+        touchStartX = null;
+        return;
+      }
       const delta = event.changedTouches[0].clientX - touchStartX;
       if (Math.abs(delta) > 50) renderSlide(currentIndex + (delta < 0 ? 1 : -1));
       touchStartX = null;
@@ -409,9 +441,19 @@
     }
     const requestedService = new URLSearchParams(window.location.search).get("service");
     if (serviceField && requestedService) {
-      const serviceAlias = requestedService === "Hair Services" ? "Hair" : requestedService;
-      const option = Array.from(serviceField.options).find((item) => item.value === serviceAlias);
-      if (option) serviceField.value = serviceAlias;
+      const aliasMap = {
+        "Hair": "Hair Services (General)",
+        "Hair Services": "Hair",
+        "Nano plastian": "Nano plastian (Flagged — confirm with salon)",
+        "Botox Treatment": "Botox Treatment (Flagged — confirm with salon)",
+      };
+      const candidates = [requestedService, aliasMap[requestedService]].filter(Boolean);
+      const option = Array.from(serviceField.options).find((item) =>
+        candidates.some((cand) => item.value.toLowerCase() === cand.toLowerCase())
+      );
+      if (option) {
+        serviceField.value = option.value;
+      }
     }
 
     function setFieldError(inputEl, errorId, message) {

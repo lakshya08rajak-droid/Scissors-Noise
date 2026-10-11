@@ -42,12 +42,20 @@ done
 grep -q 'id: "salon-photo-23"' src/salon-config.js
 echo "[OK] All 23 supplied salon photographs are present and registered."
 
-# 2c. Dedicated routes and gallery controls exist.
-grep -q 'data-page="gallery"' gallery.html
-grep -q 'data-page="reviews"' reviews.html
-grep -q 'data-page="appointment"' appointment.html
-grep -q 'data-gallery-filter' src/site-pages.js
-echo "[OK] Dedicated Services, About, Gallery, Reviews, Appointment, and Contact pages exist."
+# 2c. Dedicated routes and pre-rendered semantic landmarks exist across all 7 HTML pages.
+for page in index.html services.html about.html gallery.html reviews.html appointment.html contact.html; do
+  grep -q 'name="viewport"' "$page"
+  grep -q '<header' "$page"
+  grep -q '<nav' "$page"
+  grep -q '<main' "$page"
+  grep -q '<h1' "$page"
+  grep -q '<footer' "$page"
+  if grep -q 'src=""' "$page" || grep -q 'href="#"' "$page"; then
+    echo "ERROR: Found empty src=\"\" or placeholder href=\"#\" in $page"
+    exit 1
+  fi
+done
+echo "[OK] All 7 HTML pages contain pre-rendered semantic landmarks, viewport meta, and zero empty src/href attributes."
 
 # 3. Check section IDs in index.html
 for sec in home services about why-visit team gallery reviews booking contact site-header gallery-lightbox; do
@@ -75,17 +83,51 @@ grep -q "4.9" index.html
 echo "[OK] Flagged services, WhatsApp number (919987567224), address, and rating verified."
 
 # 6. Check no lorem ipsum or dental leakage
-if grep -qi "lorem ipsum\|dentist\|dental\|orthodont" index.html src/salon-config.js src/app.js; then
+if grep -qi "lorem ipsum\|dentist\|dental\|orthodont" index.html services.html about.html gallery.html reviews.html appointment.html contact.html src/salon-config.js src/site-pages.js src/app.js; then
   echo "ERROR: Found prohibited lorem ipsum or dental text!"
   exit 1
 fi
 echo "[OK] Zero lorem ipsum or dental terminology found."
 
-# 7. Check responsive media queries and reduced motion in CSS
+# 7. Check responsive media queries, fluid typography, and reduced motion in CSS
+grep -q "overflow-x: clip" src/styles.css
+grep -q "clamp(" src/styles.css
 grep -q "@media (min-width: 640px)" src/styles.css
 grep -q "@media (min-width: 768px)" src/styles.css
 grep -q "@media (min-width: 1024px)" src/styles.css
+grep -q "@media (min-width: 1200px)" src/styles.css
+grep -q "@media (min-width: 1400px)" src/styles.css
 grep -q "@media (prefers-reduced-motion: reduce)" src/styles.css
-echo "[OK] Responsive mobile/tablet/desktop breakpoints and reduced-motion rules verified."
+echo "[OK] Responsive mobile/tablet/laptop/desktop breakpoints, fluid clamp() typography, and reduced-motion rules verified."
+
+# 8. Validate JavaScript syntax & configuration integrity via macOS JavaScriptCore
+if [ -x /usr/bin/osascript ]; then
+  /usr/bin/osascript -l JavaScript -e '
+    ObjC.import("Foundation");
+    function read(p) {
+      return ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(p, $.NSUTF8StringEncoding, null));
+    }
+    globalThis.window = globalThis;
+    globalThis.document = {
+      body: { dataset: { page: "services" } },
+      addEventListener: function() {},
+      querySelectorAll: function() { return []; },
+      querySelector: function() { return null; },
+      getElementById: function() { return null; }
+    };
+    eval(read("src/salon-config.js"));
+    eval(read("src/site-pages.js"));
+    eval(read("src/app.js"));
+    if (!window.SALON_CONFIG || window.SALON_CONFIG.gallery.length !== 23) {
+      throw new Error("Expected 23 gallery photos in SALON_CONFIG");
+    }
+    window.SALON_CONFIG.gallery.forEach(function(item) {
+      if (!item.width || !item.height) {
+        throw new Error("Missing width/height on gallery item " + item.id);
+      }
+    });
+  ' >/dev/null
+  echo "[OK] JavaScript syntax and SALON_CONFIG integrity verified via JavaScriptCore."
+fi
 
 echo "=== ALL CHECKS PASSED ==="
